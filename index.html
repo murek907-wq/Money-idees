@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Money Finder</title>
+<title>Make Money Online</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 
 body{
 font-family:Arial;
-background:#0f172a;
+background:#111;
 color:white;
 text-align:center;
 padding:40px;
 }
 
-.box{
-background:#1e293b;
-padding:40px;
-border-radius:15px;
-max-width:500px;
-margin:auto;
+h1{
+font-size:40px;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+margin:20px;
+border-radius:10px;
 }
 
 button{
-background:#22c55e;
-border:none;
-padding:15px 30px;
+padding:15px 25px;
 font-size:18px;
-border-radius:10px;
-color:white;
+border:none;
+border-radius:8px;
+background:#00ff99;
 cursor:pointer;
 }
 
-.idea{
-margin-top:20px;
-font-size:20px;
+button:hover{
+background:#00cc77;
+}
+
+a{
+color:#00ffcc;
 }
 
 </style>
@@ -41,39 +48,56 @@ font-size:20px;
 
 <body>
 
-<div class="box">
+<h1>💰 5 REAL WAYS TO MAKE MONEY ONLINE</h1>
 
-<h1>💰 AI Money Finder</h1>
-<p>Press the button to get a new way to make money.</p>
+<p>Simple ideas anyone can start today</p>
 
-<button onclick="idea()">Generate Idea</button>
-
-<div class="idea" id="idea"></div>
-
+<div class="card">
+<h2>1️⃣ Freelance Work</h2>
+<p>Sell skills like writing, design or coding.</p>
+<a href="https://www.fiverr.com">Start on Fiverr</a>
 </div>
+
+<div class="card">
+<h2>2️⃣ Sell Digital Products</h2>
+<p>Sell ebooks, templates or guides.</p>
+<a href="https://gumroad.com">Start selling</a>
+</div>
+
+<div class="card">
+<h2>3️⃣ Print on Demand</h2>
+<p>Create t-shirts and earn per sale.</p>
+<a href="https://printful.com">Start POD</a>
+</div>
+
+<div class="card">
+<h2>4️⃣ Affiliate Marketing</h2>
+<p>Promote products and earn commission.</p>
+<a href="https://partnerstack.com">Find affiliate programs</a>
+</div>
+
+<div class="card">
+<h2>5️⃣ AI Side Hustles</h2>
+<p>Use AI tools to sell services.</p>
+<a href="https://openai.com">Learn AI tools</a>
+</div>
+
+<h2>🚀 Share With Friends</h2>
+
+<button onclick="share()">Share This Page</button>
 
 <script>
 
-const ideas = [
+function share(){
 
-"Sell digital products on Etsy",
-"Start a TikTok theme page",
-"Sell AI generated art",
-"Flip items from Facebook Marketplace",
-"Create a faceless YouTube channel",
-"Sell Notion templates",
-"Start a dropshipping store",
-"Sell online courses",
-"Affiliate marketing with TikTok",
-"Build simple websites for small businesses"
-
-]
-
-function idea(){
-
-let random = ideas[Math.floor(Math.random()*ideas.length)];
-
-document.getElementById("idea").innerHTML = random;
+if(navigator.share){
+navigator.share({
+title:'Make Money Online',
+url:window.location.href
+})
+}else{
+alert("Copy link and share with friends!");
+}
 
 }
 
