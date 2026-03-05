@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Money Ideas</title>
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:40px;
+}
+
+button{
+background:green;
+color:white;
+border:none;
+padding:15px;
+font-size:20px;
+border-radius:10px;
+cursor:pointer;
+}
+
+.idea{
+margin-top:30px;
+font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💰 Money Ideas Generator</h1>
+
+<p>Trykk på knappen for en idé</p>
+
+<button onclick="newIdea()">Gi meg en idé</button>
+
+<div class="idea" id="idea"></div>
+
+<script>
+
+let ideas = [
+"Start en liten vaskejobb i nabolaget",
+"Kjøp billige ting på Finn og selg dyrere",
+"Lag TikTok om en side hustle",
+"Start en enkel nettside med annonser",
+"Selg digitale produkter"
+];
+
+function newIdea(){
+let random = Math.floor(Math.random()*ideas.length);
+document.getElementById("idea").innerText = ideas[random];
+}
+
+</script>
+
+</body>
+</html>
