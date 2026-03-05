@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Make Money Online</title>
+
+<title>AI Side Hustle Generator</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,95 +10,147 @@
 
 body{
 font-family:Arial;
-background:#111;
+background:#0f172a;
 color:white;
 text-align:center;
 padding:40px;
 }
 
+.container{
+max-width:700px;
+margin:auto;
+}
+
 h1{
-font-size:40px;
+font-size:42px;
 }
 
 .card{
-background:#1e1e1e;
+background:#1e293b;
 padding:25px;
-margin:20px;
-border-radius:10px;
+margin-top:30px;
+border-radius:12px;
 }
 
 button{
+background:#22c55e;
+border:none;
 padding:15px 25px;
 font-size:18px;
-border:none;
-border-radius:8px;
-background:#00ff99;
+border-radius:10px;
+color:white;
 cursor:pointer;
 }
 
 button:hover{
-background:#00cc77;
+background:#16a34a;
 }
 
-a{
-color:#00ffcc;
+.share{
+background:#3b82f6;
+}
+
+.premium{
+background:#f59e0b;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<h1>💰 5 REAL WAYS TO MAKE MONEY ONLINE</h1>
+<div class="container">
 
-<p>Simple ideas anyone can start today</p>
+<h1>🤖 AI Side Hustle Generator</h1>
+
+<p>Generate business ideas using AI logic</p>
+
+<button onclick="generate()">Generate Idea</button>
 
 <div class="card">
-<h2>1️⃣ Freelance Work</h2>
-<p>Sell skills like writing, design or coding.</p>
-<a href="https://www.fiverr.com">Start on Fiverr</a>
+
+<h2 id="idea">Click generate</h2>
+
 </div>
 
 <div class="card">
-<h2>2️⃣ Sell Digital Products</h2>
-<p>Sell ebooks, templates or guides.</p>
-<a href="https://gumroad.com">Start selling</a>
+
+<h2>🔥 Premium Ideas</h2>
+
+<p>Unlock 500 premium ideas</p>
+
+<button class="premium" onclick="premium()">Unlock Premium</button>
+
 </div>
 
 <div class="card">
-<h2>3️⃣ Print on Demand</h2>
-<p>Create t-shirts and earn per sale.</p>
-<a href="https://printful.com">Start POD</a>
+
+<h2>🚀 Share</h2>
+
+<button class="share" onclick="share()">Share this site</button>
+
 </div>
 
-<div class="card">
-<h2>4️⃣ Affiliate Marketing</h2>
-<p>Promote products and earn commission.</p>
-<a href="https://partnerstack.com">Find affiliate programs</a>
 </div>
-
-<div class="card">
-<h2>5️⃣ AI Side Hustles</h2>
-<p>Use AI tools to sell services.</p>
-<a href="https://openai.com">Learn AI tools</a>
-</div>
-
-<h2>🚀 Share With Friends</h2>
-
-<button onclick="share()">Share This Page</button>
 
 <script>
 
+const industries = [
+"AI tools",
+"digital products",
+"fitness",
+"crypto",
+"education",
+"gaming",
+"productivity",
+"social media"
+]
+
+const methods = [
+"subscription service",
+"marketplace",
+"online course",
+"automation tool",
+"mobile app",
+"template store",
+"content platform"
+]
+
+const audiences = [
+"students",
+"creators",
+"freelancers",
+"small businesses",
+"remote workers",
+"gamers"
+]
+
+function generate(){
+
+let industry = industries[Math.floor(Math.random()*industries.length)]
+
+let method = methods[Math.floor(Math.random()*methods.length)]
+
+let audience = audiences[Math.floor(Math.random()*audiences.length)]
+
+let idea = method + " for " + audience + " using " + industry
+
+document.getElementById("idea").innerText = idea
+
+}
+
+function premium(){
+
+alert("Premium ideas coming soon")
+
+}
+
 function share(){
 
-if(navigator.share){
-navigator.share({
-title:'Make Money Online',
-url:window.location.href
-})
-}else{
-alert("Copy link and share with friends!");
-}
+navigator.clipboard.writeText(window.location.href)
+
+alert("Link copied!")
 
 }
 
