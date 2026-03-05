@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tjen penger</title>
+<title>AI Money Finder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
 body{
 font-family:Arial;
-text-align:center;
 background:#0f172a;
 color:white;
+text-align:center;
 padding:40px;
 }
 
 .box{
 background:#1e293b;
-padding:30px;
+padding:40px;
 border-radius:15px;
-max-width:400px;
+max-width:500px;
 margin:auto;
 }
 
@@ -24,20 +25,59 @@ button{
 background:#22c55e;
 border:none;
 padding:15px 30px;
-font-size:20px;
+font-size:18px;
 border-radius:10px;
 color:white;
+cursor:pointer;
 }
+
+.idea{
+margin-top:20px;
+font-size:20px;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="box">
-<h1>Tjen penger online</h1>
-<p>Få tilgang til smarte måter å tjene penger på.</p>
-<button>Kjøp tilgang – 49 kr</button>
+
+<h1>💰 AI Money Finder</h1>
+<p>Press the button to get a new way to make money.</p>
+
+<button onclick="idea()">Generate Idea</button>
+
+<div class="idea" id="idea"></div>
+
 </div>
+
+<script>
+
+const ideas = [
+
+"Sell digital products on Etsy",
+"Start a TikTok theme page",
+"Sell AI generated art",
+"Flip items from Facebook Marketplace",
+"Create a faceless YouTube channel",
+"Sell Notion templates",
+"Start a dropshipping store",
+"Sell online courses",
+"Affiliate marketing with TikTok",
+"Build simple websites for small businesses"
+
+]
+
+function idea(){
+
+let random = ideas[Math.floor(Math.random()*ideas.length)];
+
+document.getElementById("idea").innerHTML = random;
+
+}
+
+</script>
 
 </body>
 </html>
