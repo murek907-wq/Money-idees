@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Money Ideas</title>
+<title>Tjen penger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{
-background:black;
-color:white;
 font-family:Arial;
 text-align:center;
+background:#0f172a;
+color:white;
 padding:40px;
 }
 
-button{
-background:green;
-color:white;
-border:none;
-padding:15px;
-font-size:20px;
-border-radius:10px;
-cursor:pointer;
+.box{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+max-width:400px;
+margin:auto;
 }
 
-.idea{
-margin-top:30px;
-font-size:22px;
+button{
+background:#22c55e;
+border:none;
+padding:15px 30px;
+font-size:20px;
+border-radius:10px;
+color:white;
 }
 </style>
 </head>
 
 <body>
 
-<h1>💰 Money Ideas Generator</h1>
-
-<p>Trykk på knappen for en idé</p>
-
-<button onclick="newIdea()">Gi meg en idé</button>
-
-<div class="idea" id="idea"></div>
-
-<script>
-
-let ideas = [
-"Start en liten vaskejobb i nabolaget",
-"Kjøp billige ting på Finn og selg dyrere",
-"Lag TikTok om en side hustle",
-"Start en enkel nettside med annonser",
-"Selg digitale produkter"
-];
-
-function newIdea(){
-let random = Math.floor(Math.random()*ideas.length);
-document.getElementById("idea").innerText = ideas[random];
-}
-
-</script>
+<div class="box">
+<h1>Tjen penger online</h1>
+<p>Få tilgang til smarte måter å tjene penger på.</p>
+<button>Kjøp tilgang – 49 kr</button>
+</div>
 
 </body>
 </html>
