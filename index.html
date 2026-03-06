@@ -1,160 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<meta charset="UTF-8">
 <title>AI Side Hustle Generator</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial;
 background:#0f172a;
 color:white;
 text-align:center;
 padding:40px;
 }
 
-.container{
-max-width:700px;
-margin:auto;
-}
-
 h1{
-font-size:42px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-margin-top:30px;
-border-radius:12px;
+font-size:40px;
+margin-bottom:10px;
 }
 
 button{
 background:#22c55e;
 border:none;
-padding:15px 25px;
+padding:15px 30px;
 font-size:18px;
 border-radius:10px;
-color:white;
 cursor:pointer;
+margin:10px;
 }
 
 button:hover{
 background:#16a34a;
 }
 
-.share{
-background:#3b82f6;
+.card{
+background:#1e293b;
+padding:25px;
+margin:20px auto;
+max-width:400px;
+border-radius:15px;
+font-size:20px;
 }
 
 .premium{
-background:#f59e0b;
+background:#1e293b;
+padding:20px;
+margin-top:30px;
+border-radius:15px;
+}
+
+a{
+text-decoration:none;
 }
 
 </style>
-
 </head>
 
 <body>
-
-<div class="container">
 
 <h1>🤖 AI Side Hustle Generator</h1>
 
 <p>Generate business ideas using AI logic</p>
 
-<button onclick="generate()">Generate Idea</button>
+<button onclick="generateIdea()">Generate Idea</button>
 
-<div class="card">
-
-<h2 id="idea">Click generate</h2>
-
+<div class="card" id="idea">
+Click generate to get an idea
 </div>
 
-<div class="card">
+<button onclick="shareIdea()">Share Idea 🚀</button>
 
+<div class="premium">
 <h2>🔥 Premium Ideas</h2>
-
 <p>Unlock 500 premium ideas</p>
 
-<button class="premium" onclick="premium()">Unlock Premium</button>
-
-</div>
-
-<div class="card">
-
-<h2>🚀 Share</h2>
-
-<button class="share" onclick="share()">Share this site</button>
-
-</div>
+<a href="https://www.shopify.com" target="_blank">
+<button>Start Business</button>
+</a>
 
 </div>
 
 <script>
 
-const industries = [
-"AI tools",
-"digital products",
-"fitness",
-"crypto",
-"education",
-"gaming",
-"productivity",
-"social media"
-]
+const ideas = [
 
-const methods = [
-"subscription service",
-"marketplace",
-"online course",
-"automation tool",
-"mobile app",
-"template store",
-"content platform"
-]
+"Start a TikTok automation channel",
+"Sell AI generated logos",
+"Create a dropshipping store",
+"Build a niche blog about AI",
+"Create digital products and sell them",
+"Sell Notion templates online",
+"Start a faceless YouTube channel",
+"Create a website flipping business",
+"Sell prompts for AI tools",
+"Create a simple SaaS for freelancers",
+"Build an AI writing tool",
+"Start a print on demand store",
+"Create a social media growth service",
+"Sell digital planners",
+"Start a niche newsletter",
+"Create a micro SaaS product",
+"Build a website that finds remote jobs",
+"Start a niche meme page",
+"Sell website templates",
+"Create an AI image generator tool"
 
-const audiences = [
-"students",
-"creators",
-"freelancers",
-"small businesses",
-"remote workers",
-"gamers"
-]
+];
 
-function generate(){
+function generateIdea(){
 
-let industry = industries[Math.floor(Math.random()*industries.length)]
+const random = Math.floor(Math.random()*ideas.length);
 
-let method = methods[Math.floor(Math.random()*methods.length)]
-
-let audience = audiences[Math.floor(Math.random()*audiences.length)]
-
-let idea = method + " for " + audience + " using " + industry
-
-document.getElementById("idea").innerText = idea
+document.getElementById("idea").innerText = ideas[random];
 
 }
 
-function premium(){
+function shareIdea(){
 
-alert("Premium ideas coming soon")
+const text = document.getElementById("idea").innerText;
 
-}
+navigator.clipboard.writeText(text);
 
-function share(){
-
-navigator.clipboard.writeText(window.location.href)
-
-alert("Link copied!")
+alert("Idea copied! Share it on TikTok 🚀");
 
 }
 
 </script>
 
 </body>
+
 </html>
